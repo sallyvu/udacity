@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Popular posts</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <div class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <hr />
+  </div>
+  <div class="main-flexbox">
+    <div class="cards-container">
+      <div class="card first">Cooking</div>
+      <div class="card second">Travel</div>
+      <div class="card third">Study</div>
+      <div class="card fourth">Book</div>
+      <div class="card fifth">Productivity</div>
+      <div class="card sixth">Living</div>
+    </div>
+    <div id="map"></div>
+  </div>
+  <script>
+    let map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: {
+          lat: -34.397,
+          lng: 150.644
+        },
+        zoom: 8,
+      });
+    }
+
+    window.initMap = initMap;
+  </script>
+  <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
+</body>
+
+</html>

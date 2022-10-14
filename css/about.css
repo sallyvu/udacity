@@ -1,0 +1,49 @@
+.top-main-container {
+  background-image: url(../img/flower-background.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 70px 0px;
+  color: white;
+}
+
+.main-container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.bottom-main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.intro {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.avatar {
+  width: 50%;
+  height: 50%;
+}
+
+.connect {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+@media(max-width: 992px) {
+  .container {
+    width: 750px;
+  }
+
+  @media(max-width: 768px) {
+    .container {
+      width: 500px;
+    }
+
+    @media(max-width: 480px) {
+      .container {
+        width: 350px;
+      }
+    }
